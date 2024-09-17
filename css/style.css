@@ -5,7 +5,10 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
-
+html, body{
+    margin: 0;
+    padding: 0;
+}
 
 .container {
     display: grid;
@@ -14,7 +17,7 @@
 }
 .right-section {
     grid-column: 2;
-    background-image: url("../assests/images/image.png");
+    background: url("../assests/images/image.png") no-repeat center center / cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,6 +91,7 @@
     font-size: 15px;
     box-shadow: none;
     cursor: pointer;
+    transition: all 0.5s;
 }
 .left-section .signup-btn:hover {
     background-color: #fa6188;
@@ -132,6 +136,8 @@
     font-size: 15px;
     margin: 10px auto;
     cursor: pointer;
+    transition: all 0.5s;
+
 }
 .left-section .more-info .signin-btn:hover {
     background-color: #FF0040;
@@ -153,4 +159,30 @@
     color: #fff;
     font-style: normal;
     font-weight: bold;
+}
+
+@media (max-width: 1020px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 946px;
+    }
+    .right-section p{
+        font-size: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 774px){
+    body{
+        overflow: auto;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 946px;
+    }
+    .right-section {
+        display: none;
+    }
 }
